@@ -7,6 +7,7 @@ public class Main {
         int result = 0;
         Scanner sc = new Scanner(System.in);
         boolean flag = true;
+        Calculator calculator = new Calculator();
 
         while(flag){
 
@@ -19,29 +20,10 @@ public class Main {
             System.out.println("사칙연산 기호를 입력하세요: ");
             char operator = sc.next().charAt(0);
 
+            calculator.calculate(num1, num2, operator);
 
-            switch(operator) {
-                case '+':
-                    result = num1 + num2;
-                    break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '*':
-                    result = num1 * num2;
-                    break;
-                case '/':
-                    //(예외 처리) 0으로 나누기
-                    if(num2 == 0) {
-                        System.out.println("나눗셈 연산에서 분모(두 번째 정수)에 0이 입력될 수 없습니다.");
-                        break;}
-                    result = num1 / num2;
-                    break;
-                default:
-                    System.out.println(operator + "는 계산할 수 없는 연산자입니다.");
-                    break;
-            }
             System.out.println("result = " + result);
+            System.out.println(calculator.collection);
             System.out.println("더 계산하시겠습니까? Press Any key to Continue...\n(exit 입력 시 종료)");
             if(sc.next().equals("exit")) {
                 flag = false;
