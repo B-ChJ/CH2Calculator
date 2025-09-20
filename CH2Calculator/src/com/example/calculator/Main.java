@@ -20,15 +20,17 @@ public class Main {
             System.out.println("사칙연산 기호를 입력하세요: ");
             char operator = sc.next().charAt(0);
 
-            calculator.calculate(num1, num2, operator);
+            result = calculator.calculate(num1, num2, operator);
 
             System.out.println("result = " + result);
-            System.out.println(calculator.collection);
+            System.out.println(calculator.getCollection());
             System.out.println("더 계산하시겠습니까? Press Any key to Continue...\n(exit 입력 시 종료)");
             if(sc.next().equals("exit")) {
                 flag = false;
             }
         }
+        calculator.removeResult();
+        System.out.println("result = " + calculator.getCollection());
     }
 
 }
