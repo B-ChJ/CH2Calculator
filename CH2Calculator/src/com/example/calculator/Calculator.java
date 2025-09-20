@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Calculator {
     private ArrayList<Integer> collection = new ArrayList<>();
+
     public int result = 0;
 
     //간접 접근을 통해 필드의 collection 리스트를 가져오는 메서드

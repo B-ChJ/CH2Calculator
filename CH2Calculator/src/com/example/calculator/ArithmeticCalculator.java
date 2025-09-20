@@ -24,4 +24,8 @@ public class ArithmeticCalculator<T> {
         this.setResult();
         return result;
     }
+    //결과값 중 입력값보다 큰 결과값을 출력하는 메서드
+    public void bigResult(double num) {
+        System.out.println(collection.stream().filter(r -> r > num).toList());
+    }
 }

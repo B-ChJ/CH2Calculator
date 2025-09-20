@@ -28,8 +28,14 @@ public class Main {
                 flag = false;
             }
         }
-        calculator.removeFirst();
+        //calculator.removeFirst();
         System.out.println("result = " + calculator.getResult());
+        System.out.println("비교하고 싶은 숫자를 입력하세요.\n결과값 중에 입력값보다 큰 수만 출력됩니다.\n(0 입력 시 종료)");
+        double compareNum = sc.nextDouble();
+        if(compareNum==0) {
+            return;
+        }
+        calculator.bigResult(compareNum);
     }
 
 }
